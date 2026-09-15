@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js" defer></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <br><br><br>
+
+    <h1 id="title">Project Flat Stacy</h1>
+    <p id="intro">Hi! I'm Stacy. I'm travelling to women in STEM around the world and visiting them at their jobs. There are so many careers in STEM, I want to explore them all! Visiting women in STEM gives me the opportunity to visualize myself in these careers, and learn about the inspiring women who broke through the barriers and entered these male dominated fields. </p>
+
+    <br>
+
+    <p id="journey">See my journey below!</p>
+
+    <div id="animatedStacy">
+        <img src="images/stacy.png" alt="flat stacy">
+    </div>
+
+    <br>
+    <div></div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+
+    <script>
+        // Create the map and set the initial location and zoom
+        const map = L.map('map').setView([39.892504585761245, -97.96167678720126], 5);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add a marker
+        L.marker([38.95918629739457, -77.35559102949674])
+            .addTo(map)
+            .bindPopup('Emily: Software Tester at Leidos')
+            //.openPopup();
+
+        L.marker([39.200123313401, -76.56947031794836])
+            .addTo(map)
+            .bindPopup('Sonja: Associate Project Engineer at Ameresco')
+            //.openPopup();
+    </script>
+
+    <br><br>
+
+    <h2>Meet the women I've travelled with and how I spent my day at their jobs!</h2>
+
+    <br><br>
+
+<!-- =========================
+     EMILY'S STORY
+     ========================= -->
+
+<div class="story">
+    <div class="post">
+        <div class="story-content">
+            <!-- Emily Slideshow -->
+            <div class="slideshow-section">
+
+                <div id="emily-slideshow" class="slideshow-container">
+
+                  <div class="mySlides fade">
+                    <img src="images/emily/emilyDesk.JPEG" style="width:100%">
+                    <div class="text">Stacy helping me write Selenium Tests! Testing every element on a web page (buttons, links, etc) can be very time consuming. Selenium helps us create automated tests for these features, ensuring that the web page has the intended functionality when intereacting with the elements.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/emily/emilyMeeting.JPEG" style="width:100%">
+                    <div class="text">Stacy is getting ready to join the daily Standup meeting! Every day my team has a meeting to dicuss what we are doing for the day. We each take turns going over what we are working on and what we may need help with, which allows us to better prioritize goals and stay coordinated as a team.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/emily/emilyFrappe.png" style="width:100%">
+                    <div class="text">At Leidos headquarters, every coffee is $1! Stacy is enjoying my $1 frappuccino with me.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/emily/emilyGitpush.JPEG" style="width:100%">
+                    <div class="text">At the end of the day, we push our code to GitLab! Git is a system that stores all the code for a project in a repository. Every developer works out of their own "branch", commiting and pushing our changes to our branch. When we're ready, we can merge our branches to create one master branch of code that we put to production! This allows a team of people to work on the same project at the same time.</div>
+                  </div>
+
+                    <!-- Emily Controls -->
+                  <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+
+                </div>
+
+                <!-- Emily Dots -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide1(1)"></span>
+                    <span class="dot" onclick="currentSlide1(2)"></span>
+                    <span class="dot" onclick="currentSlide1(3)"></span>
+                    <span class="dot" onclick="currentSlide1(4)"></span>
+                </div>
+
+            </div>
+
+
+            <!-- Emily Card -->
+            <div class="card">
+
+                <div class="card-inner">
+
+                    <div class="card-front">
+                        <img src="images/emily/emilyHeadshot.jpg" alt="Emily's headshot" style="height:100%">
+                    </div>
+
+                    <div class="card-back">
+                        <p class="card-back-text">
+                            Hi! My name is Emily McNeal and I am a Software Tester 
+                            at Leidos. Leidos is a government and commercial contracting 
+                            agency that focuses on digital and moderinization solutions 
+                            for its' clients. I work on a government contract that 
+                            maintains a web app for a government department. As a software 
+                            tester, I make sure that the developers solutions to the bugs 
+                            and errors actually work, thoroughly checking every aspect of 
+                            the page. In addition to front-end testing, I also create 
+                            automated tests that test smaller aspects of the app, like 
+                            buttons or links, that are too tedious to manually check by hand. 
+                            I usually work from home, but I brought Stacy with me to a day at 
+                            Leidos Global Headquarters in Reston, Virginia!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================
+     SONJA'S STORY
+     ========================= -->
+
+<div class="sonja-story">
+<div class="story">
+
+    <div class="post">
+
+        <div class="story-content">
+
+                      <!-- Sonja Card -->
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/sonja/sonjaHeadshot.jpg" alt="Sonja's headshot" style="height:100%">
+                    </div>
+
+                    <div class="card-back">
+                        <p class="card-back-text">
+                            Hi, My name is Sonja Evans and I work as an
+                            Associate Project Engineer with Ameresco, a company
+                            that focuses on bringing sustainable infrastructure
+                            into our large scale projects! I work in Columbia,
+                            Maryland as part of our federal branch, which means
+                            that we do contracts with government agencies to
+                            improve their energy infrastructure on military
+                            bases and in government buildings. I'm currently
+                            working on a project at the US Coast Guard Yard
+                            (USCGY) in Baltimore, Maryland! I brought Stacy with
+                            me to my project's main kickoff meeting. At this
+                            meeting, USCGY leadership attended to listen to
+                            Ameresco (myself and my project manager coworker)
+                            present the project and give an overview of what is
+                            happening across the entire campus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sonja Slideshow -->
+            <div class="slideshow-section">
+
+                <div id="sonja-slideshow" class="slideshow-container">
+
+                  <div class="mySlides fade">
+                    <img src="images/sonja/sonjaMeeting.jpg" style="width:100%">
+                    <div class="text">Stacy attended my project’s kick off meeting! It’s a good way to set the stage and inform all important parties about the work being done on the site. The project is very large and encompasses a lot of different components including rooftop solar, a microgrid, transformer replacements, decentralization of the heating system, and building envelope improvements.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/sonja/sonjaNotes.jpg" style="width:100%">
+                    <div class="text">Stacy helping me take notes! Important information about site access, working schedules and outage coordination were given to us from the customer in this kick off meeting. </div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/sonja/sonjaCoworker.JPEG" style="width:100%">
+                    <div class="text">Stacy and my coworker Jordan and I! It can be isolating being a woman working in the engineering field. During my time at the University of Maryland pursuing my engineering degree, I was often times one of only 3 or 4 women in my classes of about 30. Since joining the workforce, that representation has lessened even more. In the office, I am the only woman in engineering! Jordan (who works remote) and I support each other whenever we can, helping with project tasks but also being there for each other emotionally. I’m very grateful to have a coworker that supports me and understands what it’s like to be in a male-dominated field!</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/sonja/sonjaType.JPEG" style="width:100%">
+                    <div class="text">After the kick off meeting, Stacy and I went back to my apartment to type up my notes from the other speakers and check in on my email! I had to follow up with some of the items from the meeting and submit a couple of RFIs (requests for information) so that we can get this project started smoothly!!</div>
+                  </div>
+
+                    <!-- Sonja Controls -->
+                  <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+                </div>
+
+                <!-- Sonja Dots -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide2(1)"></span>
+                    <span class="dot" onclick="currentSlide2(2)"></span>
+                    <span class="dot" onclick="currentSlide2(3)"></span>
+                    <span class="dot" onclick="currentSlide2(4)"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+
+</body>
+</html>

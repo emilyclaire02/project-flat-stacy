@@ -1,0 +1,480 @@
+/* ==========================================================================
+   1. GLOBAL RESETS & BOX MODEL
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding/border in element dimensions */
+}
+
+/* ==========================================================================
+   2. BODY & GENERAL TYPOGRAPHY
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #F3F9E3;
+    padding: 20px;
+}
+
+.topnav {
+    background-color: #6AB547;
+    overflow: hidden;
+    position: absolute; /* or 'fixed' to stay in place on scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px; 
+}
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: clamp(1.1rem, 2.5vw, 1.875rem);
+    height: 80px; 
+    width: 150px;
+}
+  
+.topnav a:hover {
+    background-color: #abd797;
+    color: black;
+}
+  
+.topnav a.active {
+    background-color: #628B48;
+    color: white;
+}
+
+/* ==========================================================================
+   3. HEADINGS & CONTENT ELEMENTS
+   ========================================================================== */
+h1 {
+    color: #D8829D;
+    margin-bottom: 15px;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    text-align: center;
+}
+
+h2 {
+    color: #2d3748;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+a {
+    color: #3182ce;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#title {
+    text-align: center;
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    color: #D8829D;
+}
+
+#intro {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    text-align: center;
+}
+
+#journey {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    text-align: center;
+}
+
+/* ==========================================================================
+   4. LAYOUT CONTAINERS & UTILITIES
+   ========================================================================== */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Centers the container on the screen */
+    background: #ffffff;
+    padding: clamp(15px, 4vw, 30px);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#animatedStacy {
+    /* position: fixed; */
+    bottom: 20px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+
+    animation: moveStacy 10s linear infinite alternate;
+}
+
+#animatedStacy img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes moveStacy {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(100vw - 100px));
+    }
+}
+
+
+
+/* From Uiverse.io by vamsidevendrakumar */ 
+.card {
+    width: 400px;
+    /* height: 500px; */
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    /* width: 600px; */
+    height: 500px;
+    /* width: 100%; */
+    /* height: 100%; */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #D8829D;;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: clamp(5px, 1vw, 10px) solid #D8829D;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    transform: rotateY(0deg);
+    /* background-image: url('images/emily/emilyHeadshot.jpg'); */
+  }
+  
+  .card-back {
+    background-color: #D8829D;;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: clamp(5px, 1vw, 10px) solid #D8829D;
+    border-radius: 10px;
+    justify-content: center;
+    padding: clamp(15px, 3vw, 25px);
+    font-size: 24x;
+    transform: rotateY(180deg);
+  }
+
+  .story {
+    /* background-image: url('images/3359732.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#628B48; */
+    border-radius: 40px;
+    background: #628B48;
+    box-shadow:
+        inset 13px -13px 26px #415c30,
+        inset -13px 13px 26px #83ba60;
+    background-size: cover;
+    width: 80%;
+    min-height: 600px;
+    margin-bottom: 50px;
+    padding: clamp(20px, 4vw, 40px);
+}
+
+
+/* ==========================================================================
+   4. MAP
+   ========================================================================== */
+   #map { 
+    height: 500px; 
+    outline: 7px solid #D8829D;
+    border-radius: 40px; 
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: clamp(8px, 2vw, 16px);
+  color: white;
+  font-weight: bold;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  padding: clamp(6px, 1.5vw, 10px);
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: #D8829D;
+  border-radius: 10px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: clamp(10px, 2vw, 15px); 
+  width: clamp(10px, 2vw, 15px);
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(25px, 5vw, 50px);
+}
+
+.slideshow-section {
+    width: 500px;
+}
+
+.sonja-story {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-back-text {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: black;
+}
+
+/* ========================================================================== 
+5. TABLET / SMALL SCREEN 
+========================================================================== */ 
+@media (max-width: 900px) { 
+    .story { 
+        width: 95%; 
+        padding: 25px; 
+    } 
+        
+    .story-content { 
+        gap: 30px; 
+    } 
+    
+    .slideshow-section { 
+        flex-basis: 45%; 
+    } 
+    
+    .card { 
+        flex-basis: 45%; 
+    } 
+    
+} 
+
+/* ========================================================================== 
+6. MOBILE 
+========================================================================== */ 
+@media (max-width: 768px) { 
+    body { 
+        padding: 10px; 
+    } 
+    
+    /* Navigation */ 
+    .topnav { 
+        min-height: 60px; 
+        display: flex; 
+    } 
+    
+    .topnav a { 
+        width: auto; 
+        flex: 1; 
+        min-height: 60px; 
+        padding: 12px 8px; 
+        font-size: clamp(1rem, 4vw, 1.4rem); 
+    } 
+        
+    /* Headings */ 
+    #title { 
+        margin-top: 10px; 
+    } 
+    
+    #intro, #journey {
+        padding: 0 10px; 
+    } 
+    
+    /* Map */ 
+    #map { 
+        height: 350px; border-radius: 25px; outline-width: 5px; 
+    } 
+    
+    .story-content { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 30px; 
+    } 
+    
+    .slideshow-section, .card {
+        width: 100%; 
+        max-width: 500px; flex: none; 
+    } 
+    
+    .slideshow-container { 
+        width: 100%; 
+    }
+    
+    .card { 
+        width: min(100%, 400px); 
+    }
+    
+    .sonja-story { 
+        justify-content: center; 
+    } 
+    
+    .story { 
+        width: 95%; 
+        min-height: 0; 
+        border-radius: 25px; 
+        padding: 20px; 
+        margin-bottom: 30px; 
+    } 
+    
+    .text {
+        font-size: clamp(0.65rem, 2.5vw, 0.85rem); 
+        line-height: 1.3; 
+        padding: 6px 8px; 
+    } 
+    
+    .prev, .next { 
+        padding: 10px; 
+    } 
+} 
+
+/* ========================================================================== 
+7. VERY SMALL PHONES 
+========================================================================== */ 
+
+@media (max-width: 480px) {
+    body { 
+        padding: 5px; 
+    } 
+    
+    .topnav a { 
+        font-size: 1rem; 
+        padding: 10px 5px; 
+    } 
+    
+    .story { 
+        width: 100%; 
+        padding: 15px; 
+        border-radius: 20px; 
+    } 
+    
+    .story-content { 
+        gap: 20px; 
+    } 
+    
+    .card { 
+        width: 100%; 
+    } 
+    
+    .card-back { 
+        padding: 12px; 
+    } 
+    
+    .card-back-text { 
+        font-size: 0.78rem; 
+        line-height: 1.35; 
+    } 
+    
+    .text { 
+        font-size: 0.65rem; 
+        line-height: 1.2; 
+        padding: 5px; 
+    } 
+    
+    #map { 
+        height: 300px; 
+        border-radius: 20px; 
+    } 
+}
