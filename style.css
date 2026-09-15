@@ -262,7 +262,7 @@ a:hover {
 /* Caption text */
 .text {
   color: black;
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
   padding: clamp(6px, 1.5vw, 10px);
   position: absolute;
   bottom: 8px;
