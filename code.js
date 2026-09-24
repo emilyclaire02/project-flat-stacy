@@ -100,3 +100,54 @@ function showSlides2(n) {
     // Activate the selected Sonja dot
     dots[slideIndex2 - 1].className += " active";
 }
+
+// ==========================================
+// LAUREN'S SLIDESHOW
+// ==========================================
+
+let slideIndex3 = 1;
+
+showSlides3(slideIndex3);
+
+function plusSlides3(n) {
+    showSlides3(slideIndex3 += n);
+}
+
+function currentSlide3(n) {
+    showSlides3(slideIndex3 = n);
+}
+
+function showSlides3(n) {
+
+    const slideshow = document.getElementById("lauren-slideshow");
+
+    // ONLY get slides and dots inside Lauren's slideshow
+    const slides = slideshow.getElementsByClassName("mySlides");
+    const dots = document.querySelectorAll(
+        "#lauren-slideshow + div .dot"
+    );
+
+    if (n > slides.length) {
+        slideIndex3 = 1;
+    }
+
+    if (n < 1) {
+        slideIndex3 = slides.length;
+    }
+
+    // Hide Lauren's slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Remove active from Lauren's dots
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Show the selected Lauren slide
+    slides[slideIndex3 - 1].style.display = "block";
+
+    // Activate the selected Lauren dot
+    dots[slideIndex3 - 1].className += " active";
+}

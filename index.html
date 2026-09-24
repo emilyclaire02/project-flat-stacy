@@ -43,7 +43,7 @@
 
     <script>
         // Create the map and set the initial location and zoom
-        const map = L.map('map').setView([39.892504585761245, -97.96167678720126], 5);
+        const map = L.map('map').setView([39.892504585761245, -97.96167678720126], 4);
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -60,6 +60,11 @@
         L.marker([39.200123313401, -76.56947031794836])
             .addTo(map)
             .bindPopup('Sonja: Associate Project Engineer at Ameresco')
+            //.openPopup();
+
+        L.marker([40.0617, -74.1096])
+            .addTo(map)
+            .bindPopup('Lauren: Camera operator for the Banana Ball Broadcast Team')
             //.openPopup();
     </script>
 
@@ -228,14 +233,136 @@
                     <span class="dot" onclick="currentSlide2(3)"></span>
                     <span class="dot" onclick="currentSlide2(4)"></span>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- =========================
+     LAUREN'S STORY
+     ========================= -->
+
+<div class="story">
+    <div class="post">
+        <div class="story-content">
+            <!-- Lauren Slideshow -->
+            <div class="slideshow-section">
+
+                <div id="lauren-slideshow" class="slideshow-container">
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenTravel.jpg" style="width:100%">
+                    <div id="lauren-travel-text" class="text">Stacy is officially off and on her way to Rickwood Field in Birmingham, Alabama, to help broadcast the Banana Ball Coconuts vs. Clowns game! She's picked up her credential, and we're all set and ready to leave the hotel. We're excited to get to the ballpark, see what the broadcast team has to offer, and bring the energy of this special game to viewers!Stacy is officially off and on her way to Rickwood Field in Birmingham, Alabama, to help broadcast the Banana Ball Coconuts vs. Clowns game! She's picked up her credential, and we're all set and ready to leave the hotel. We're excited to get to the ballpark, see what the broadcast team has to offer, and bring the energy of this special game to viewers!</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenProduce.jpg" style="width:100%">
+                    <div class="text">Today, we're producing a game at Rickwood Field, the oldest ballpark in America! We're honored to be part of this special broadcast and help bring the game to viewers. Stacy is working with our producer, Emerson, to finalize the script, ensuring our information and stories are ready for the show. Producing requires organization, creativity, and teamwork to bring everything together for a successful broadcast</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenBroadcast.jpg" style="width:100%">
+                    <div class="text">Here in the broadcast control room, Chris directs camera operators, replay, and graphics to make sure everything comes together smoothly during a live production. Stacy helped him call camera shots, coordinate replays, and communicate with the graphics team. This role requires strong communication, quick decision-making, and teamwork to keep the broadcast running smoothly.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenData.jpg" style="width:100%">
+                    <div class="text">Here in broadcast, Emma operates XPression to build and input data for in-game graphics that appear live on the broadcast. Stacy helped her prepare graphics, enter game information, and make sure everything was accurate before going on air. This job combines technology, attention to detail, and quick thinking to keep viewers informed throughout the game.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenA1.jpg" style="width:100%">
+                    <div class="text">Here in broadcast, Jared works as the A1, managing all the audio for the live production. He makes sure commentators, microphones, and other audio sources sound clear for viewers. Stacy helped Jared learn how to manage audio levels, monitor sound, and ensure everything sounds great on air. This role requires technical knowledge, attention to detail, and quick problem-solving to keep the broadcast sounding its best.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenJess.jpg" style="width:100%">
+                    <div class="text">Today, Stacy is helping Jess operate the broadcast gimbal, a camera system used for on-field hits and interviews during the live broadcast. Together, they capture engaging shots and bring viewers closer to the action. Working as a camera operator requires teamwork, creativity, and technical skills to capture great footage!</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenJames.jpg" style="width:100%">
+                    <div class="text">Here in broadcast, James is responsible for managing all the technical aspects of our productions. He makes sure everything gets on the air and stays on the air, from checking equipment to troubleshooting technical issues. Stacy helped him monitor equipment, check technical setups, and learn how we keep a broadcast running smoothly. Every day brings new challenges that require problem-solving, teamwork, and technical skills.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenAdrian.jpg" style="width:100%">
+                    <div class="text">Here in broadcast, Stacy and Adrian put in the work! From wrangling cables and setting up equipment to helping bring productions to life, every day is a hands-on experience. They worked together to keep things running smoothly, solve problems, and make people smile.</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenCamera.jpg" style="width:100%">
+                    <div class="text">Look at Stacy go! She's taking charge of the low third camera all by herself and capturing the action like a pro!</div>
+                  </div>
+
+                  <div class="mySlides fade">
+                    <img src="images/lauren/laurenBall.jpg" style="width:100%">
+                    <div class="text">Wow! Stacy even caught a foul ball! In Banana Ball, a fan catching a foul ball counts as an out, making this an exciting moment for everyone in the ballpark!</div>
+                  </div>
+
+                    <!-- Lauren Controls -->
+                  <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+
+                </div>
+
+                <!-- Lauren Dots -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide3(1)"></span>
+                    <span class="dot" onclick="currentSlide3(2)"></span>
+                    <span class="dot" onclick="currentSlide3(3)"></span>
+                    <span class="dot" onclick="currentSlide3(4)"></span>
+                    <span class="dot" onclick="currentSlide3(5)"></span>
+                    <span class="dot" onclick="currentSlide3(6)"></span>
+                    <span class="dot" onclick="currentSlide3(7)"></span>
+                    <span class="dot" onclick="currentSlide3(8)"></span>
+                    <span class="dot" onclick="currentSlide3(9)"></span>
+                    <span class="dot" onclick="currentSlide3(10)"></span>
+                </div>
 
             </div>
 
+
+            <!-- Lauren Card -->
+            <div class="card">
+
+                <div class="card-inner">
+
+                    <div class="card-front">
+                        <img src="images/lauren/laurenHeadshot.jpg" alt="Lauren's headshot" style="height:100%">
+                    </div>
+
+                    <div class="card-back">
+                        <p id="lauren-bio" class="card-back-text">
+                            Hi, I'm Lauren Zycband, a camera operator for the 
+                            Banana Ball Broadcast Team (BTV). I graduated from 
+                            High Point University in May 2026 with a degree in 
+                            Media Production. I'm from Brick, New Jersey and I'm 
+                            passionate about live sports broadcasting and capturing 
+                            the excitement, energy, and unforgettable moments of the 
+                            game from behind the camera. As a BTV camera operator, I 
+                            travel across the United States, operating stationary 
+                            cameras for live field productions. Working under the 
+                            direction of Broadcast and Videoboard Directors, I focus 
+                            on framing and executing shots that support broadcast 
+                            storytelling and enhance the overall viewing experience. I 
+                            also assist with camera setup, preparation, equipment 
+                            breakdown, and post-game wrap. This weekend, I traveled to 
+                            Birmingham, Alabama, with Stacy to help broadcast the Banana 
+                            Ball Coconuts vs. Clowns game at Rickwood Field. Established 
+                            in 1910, Rickwood Field is recognized as America's oldest 
+                            professional baseball park, making this an especially exciting 
+                            opportunity. Being part of the BTV team allows me to apply my 
+                            production skills in a fast-paced, live sports environment while 
+                            continuing to grow my experience and passion for the broadcasting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
-</div>
 </div>
 
 
