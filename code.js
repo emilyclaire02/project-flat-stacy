@@ -151,3 +151,55 @@ function showSlides3(n) {
     // Activate the selected Lauren dot
     dots[slideIndex3 - 1].className += " active";
 }
+
+
+// ==========================================
+// ABBY'S SLIDESHOW
+// ==========================================
+
+let slideIndex4 = 1;
+
+showSlides4(slideIndex4);
+
+function plusSlides4(n) {
+    showSlides4(slideIndex4 += n);
+}
+
+function currentSlide4(n) {
+    showSlides4(slideIndex4 = n);
+}
+
+function showSlides4(n) {
+
+    const slideshow = document.getElementById("abby-slideshow");
+
+    // ONLY get slides and dots inside Abby's slideshow
+    const slides = slideshow.getElementsByClassName("mySlides");
+    const dots = document.querySelectorAll(
+        "#abby-slideshow + div .dot"
+    );
+
+    if (n > slides.length) {
+        slideIndex4 = 1;
+    }
+
+    if (n < 1) {
+        slideIndex4 = slides.length;
+    }
+
+    // Hide Abby's slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Remove active from Abby's dots
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Show the selected Abby slide
+    slides[slideIndex4 - 1].style.display = "block";
+
+    // Activate the selected Abby dot
+    dots[slideIndex4 - 1].className += " active";
+}

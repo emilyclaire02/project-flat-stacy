@@ -325,15 +325,18 @@ a:hover {
     width: 500px;
 }
 
-.sonja-story {
+.right-story {
     display: flex;
     justify-content: flex-end;
 }
+
+
 
 .card-back-text {
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     color: black;
 }
+
 
 /* ========================================================================== 
 5. TABLET / SMALL SCREEN 
